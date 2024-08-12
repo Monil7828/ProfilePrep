@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="user_style.css">
+    <title>Profileprep_login/Signup</title>
+    <link rel="icon" type="image/x-icon" href="ico.jpg">
+    
+</head>
+<body>
+<!-- 
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+
+    <div class="video-overlay"></div> Blur layer -->
+ <div class="wrapper">
+    <nav class="nav">
+        <div class="nav-logo">
+            <p>Profileprep</p>
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                 <!-- home ma chnges karavnu chhe loggin page alg karvanu chhe -->
+                <li><a href="index.html" class="link active">Home</a></li>
+                <li><a href="Courses.html" class="link">Courses</a></li>
+                <li><a href="about.html" class="link">About</a></li>
+                <li><a href="contact.html" class="link">contact-Us</a></li>
+                <li><a href="feedback.html" class="link">Feedback</a></li>
+            </ul>
+        </div>
+        <div class="nav-button" id="nav-btn">
+            <button class="btn white-btn" id="loginBtn" onclick="showlogin()">Sign In</button>
+            <!-- <button class="btn" id="registerBtn" onclick="showregister()">Sign Up</button> -->
+            <!-- <button class="btn" id="logoutBtn" style="display: none;" ">Logout</button> -->
+            <div class="profile-icon" id="profileIcon" style="display: none;">
+                <img src="profile.webp" alt="Profile" class="nav-profile-picture">
+                <div class="dropdown">
+                    <button class="dropbtn">▼</button>
+                    <div class="dropdown-content">
+                        <a href="#"><i class='bx bx-user-circle'></i>   Profile</a>
+                        <a href="#"><i class='bx bx-cog' ></i>    Settings</a>
+                        <a href="#" id="logoutBtn" onclick="logout()">
+                            <i class="bx bx-log-out"></i>   Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+    <hr>
+    <!----------------------------- Form box ----------------------------------->    
+    <div class="form-box">
+        
+        <!------------------- login form -------------------------->
+
+        <div class="login-container" id="login">
+            <div class="top">
+                <span>Don't have an account? <a href="#" onclick="showregister()">Sign Up</a></span>
+                <header>Login</header>
+            </div>
+            <!-- <div class="input-box">
+                <input type="text" class="input-field" id="Usernamelogin" placeholder="Username">
+                <i class="bx bx-user"></i>
+            </div> -->
+            <div class="input-box">
+                <input type="text" class="input-field" id="Emaillogin" placeholder="Email or Phone">
+                <i class="bx bx-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Password" id="Passwordlogin">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            
+            <div class="input-box">
+                <button type="submit" class="submit" value="Register" id="loginSubmitBtn" >Sign in</button>
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="login-check">
+                    <label for="login-check"> Remember Me</label>
+                </div>
+                <div class="two">
+                    <label><a href="#" id="Forgotpassword">Forgot password?</a></label>
+                </div>
+            </div>
+        </div>
+
+        <!------------------- registration form -------------------------->
+        <div class="register-container" id="register">
+            <div class="top">
+                <span>Have an account? <a href="#" onclick="showlogin()">Login</a></span>
+                <header>Sign Up</header>
+            </div>
+            
+                <div class="input-box">
+                    <input type="text" class="input-field" id="Username" placeholder="Username">
+                    <i class="bx bx-user"></i>
+                </div>
+                
+            
+            <div class="input-box">
+                <input type="email" class="input-field" id="Email" placeholder="Email">
+                <i class="bx bx-envelope"></i>
+            </div>
+           
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Password" id="Password">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Re-Enter Password" id="Password1">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <button type="submit" class="submit" value="Register" id="registerSubmitBtn" >Register</button>
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="register-check">
+                    <label for="register-check"> Remember Me</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Terms & conditions</a></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>   
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>About Profileprep</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi porro, nemo quas harum explicabo accusamus alias corporis officia quidem. Unde hic itaque architecto eveniet sapiente ipsum aspernatur, ratione magni eius.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Courses.html">Courses</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-form">
+                <h2>Contact Us</h2>
+                <p>Email: support@rofileprep.com</p>
+                <p>Phone: +123-456-7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Profileprep | All rights reserved.
+        </div>
+    </footer>
+
+    
+
+
+
+<script>
+   
+   function myMenuFunction() {
+    var i = document.getElementById("navMenu");
+
+    if(i.className === "nav-menu") {
+        i.className += " responsive";
+    } else {
+        i.className = "nav-menu";
+    }
+   }
+ 
+
+
+//    const loginBtn = document.getElementById('nav-btn'); // Assuming your button has id="loginBtn"
+//     const maxWidth900 = window.matchMedia("(max-width: 900px)").matches;
+
+//     if (maxWidth900) {
+//         loginBtn.classList.add('nav-menu'); // Add class when viewport is <= 900px
+//          // Add class when viewport is <= 900px
+//     } else {
+//         loginBtn.classList.remove('nav-menu'); // Remove class when viewport is > 900px
+//        // Remove class when viewport is > 900px
+//     }
+
+
+</script>
+
+<script>
+    var a = document.getElementById("loginBtn");
+    var b = document.getElementById("registerBtn");
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+
+    function showlogin() {
+        x.style.left = "4px";
+        y.style.right = "-520px";
+        a.className += " white-btn";
+        b.className = "btn";
+        x.style.opacity = 1;
+        y.style.opacity = 0;
+    }
+
+    function showregister() {
+        x.style.left = "-510px";
+        y.style.right = "5px";
+        a.className = "btn";
+        b.className += " white-btn";
+        x.style.opacity = 0;
+        y.style.opacity = 1;
+    }
+</script>
+<script src="user_profile.js"></script>
+<script src="auth.js" type="module"></script>
+<script src="firebase.js" type="module"></script>
+
+<!-- <script src="nav.js" type="module"></script> -->
+
+
+
+
+
+</body>
+</html>

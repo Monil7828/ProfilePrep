@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- <link rel="stylesheet" href="user_style.css"> -->
+    <link rel="stylesheet" href="contact.css">
+    <title>Profileprep-About_us</title>
+    <link rel="icon" type="image/x-icon" href="ico.png">
+    <style>
+    </style>
+    <!-- <script src="auth.js" type="module"></script> -->
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav-logo">
+                <p>Profileprep</p>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <!-- home ma chnges karavnu chhe loggin page alg karvanu chhe -->
+                    <li><a href="index.html" class="link">Home</a></li>
+                    <li><a href="Courses.html" class="link">Courses</a></li>
+                    <li><a href="about.html" class="link active">About</a></li>
+                    <li><a href="contact.html" class="link">contact-Us</a></li>
+                    <li><a href="feedback.html" class="link ">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="nav-button" id="navButton">
+                <button class="btn white-btn" id="loginBtn"><a href="index.html" onclick="showlogin()"
+                        style="text-decoration: none; color: black;">Sign In</a></button>
+                <!-- <button class="btn" id="registerBtn"><a href="User.html" onclick="showregister()"
+                        style="text-decoration: none; color: black;">Sign Up</a></button> -->
+                <!-- <button class="btn" id="logoutBtn" style="text-decoration: none; color: black; display: none;">Logout</button> -->
+                <div class="profile-icon" id="profileIcon" style="display: none;">
+                    <img src="profile.webp" alt="Profile" class="nav-profile-picture">
+                    <div class="dropdown">
+                        <button class="dropbtn">▼</button>
+                        <div class="dropdown-content">
+                            <a href="#"><i class='bx bx-user-circle'></i>   Profile</a>
+                            <a href="#"><i class='bx bx-cog' ></i>    Settings</a>
+                            <a href="#" id="logoutBtn" onclick="logout()">
+                                <i class="bx bx-log-out"></i>   Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-menu-btn">
+                <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+            </div>
+        </nav>
+        <hr>
+        <main class="content">
+            <section class="left-content">
+                <div class="container">
+                    <!-- <h1>About Us</h1> -->
+                    <img src="about.jpg" alt="About Us" class="responsive-img">
+                </div>
+            </section>
+            <section class="right-form">
+                <div class="container">
+                    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis aut veritatis
+                        laboriosam id harum natus labore saepe nostrum molestiae aspernatur voluptatem aperiam,
+                        exercitationem repellendus nihil sequi eveniet iusto deleniti quisquam!</p>
+                    <p class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores ducimus facilis
+                        dolor
+                        vero dignissimos doloribus modi maxime inventore nisi odit! Ducimus, odit enim maiores iure
+                        itaque
+                        quisquam expedita ullam sapiente.
+                    </p>
+                    <p class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur veniam aperiam
+                        doloremque reprehenderit commodi ab odit minus quia adipisci quae ratione quisquam, officiis
+                        deserunt dicta non tenetur? Dolorum, autem a.</p>
+                    <!-- <p class="para">At RailRunner, our passion for train travel drives us to share this enthusiasm with you.
+                        Whether you're embarking on a new adventure or planning a convenient trip, we're here to assist you
+                        every step of the way.</p>
+                    <p class="para">Thank you for choosing RailRunner for your train travel needs. We wish you a wonderful
+                        journey!</p> -->
+                </div>
+            </section>
+            </section>
+    </div>
+
+
+
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>About Profileprep</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi porro, nemo quas harum explicabo
+                    accusamus alias corporis officia quidem. Unde hic itaque architecto eveniet sapiente ipsum
+                    aspernatur, ratione magni eius.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Courses.html">Courses</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-form">
+                <h2>Contact Us</h2>
+                <p>Email: support@rofileprep.com</p>
+                <p>Phone: +123-456-7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Profileprep | All rights reserved.
+        </div>
+    </footer>
+
+
+    <script>
+        function myMenuFunction() {
+            var i = document.getElementById("navMenu");
+
+            if (i.className === "nav-menu") {
+                i.className += " responsive";
+            } else {
+                i.className = "nav-menu";
+            }
+        }
+
+    </script>
+    <script type="module" src="nav.js"></script>
+    <script src="user_profile.js"></script>
+</body>
+
+</html>

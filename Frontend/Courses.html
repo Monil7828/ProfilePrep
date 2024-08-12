@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profileprep-Courses</title>
+    <link rel="stylesheet" href="user_style.css">
+    <link rel="stylesheet" href="Courses.css">
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav-logo">
+                <p>Profileprep</p>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                     <!-- home ma chnges karavnu chhe loggin page alg karvanu chhe -->
+                    <li><a href="index.html" class="link">Home</a></li>
+                    <li><a href="Courses.html" class="link active">Courses</a></li>
+                    <li><a href="about.html" class="link">About</a></li>
+                    <li><a href="contact.html" class="link">contact-Us</a></li>
+                    <li><a href="feedback.html" class="link">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="nav-button" id="nav-btn">
+                <button class="btn white-btn" id="loginBtn" onclick="showlogin()">Sign In</button>
+                <!-- <button class="btn" id="registerBtn" onclick="showregister()">Sign Up</button> -->
+                <!-- <button class="btn" id="logoutBtn" style="display: none;" ">Logout</button> -->
+                <div class="profile-icon" id="profileIcon" style="display: none;">
+                    <img src="profile.webp" alt="Profile" class="nav-profile-picture">
+                    <div class="dropdown">
+                        <button class="dropbtn">▼</button>
+                        <div class="dropdown-content">
+                            <a href="#"><i class='bx bx-user-circle'></i>   Profile</a>
+                            <a href="#"><i class='bx bx-cog' ></i>    Settings</a>
+                            <a href="#" id="logoutBtn" onclick="logout()">
+                                <i class="bx bx-log-out"></i>   Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-menu-btn">
+                <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+            </div>
+        </nav>
+        </div>
+
+
+
+
+        
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>About Profileprep</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi porro, nemo quas harum explicabo accusamus alias corporis officia quidem. Unde hic itaque architecto eveniet sapiente ipsum aspernatur, ratione magni eius.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Courses.html">Courses</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-form">
+                <h2>Contact Us</h2>
+                <p>Email: support@rofileprep.com</p>
+                <p>Phone: +123-456-7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Profileprep | All rights reserved.
+        </div>
+    </footer>
+
+    
+
+
+
+<script>
+   
+   function myMenuFunction() {
+    var i = document.getElementById("navMenu");
+
+    if(i.className === "nav-menu") {
+        i.className += " responsive";
+    } else {
+        i.className = "nav-menu";
+    }
+   }
+ 
+
+
+//    const loginBtn = document.getElementById('nav-btn'); // Assuming your button has id="loginBtn"
+//     const maxWidth900 = window.matchMedia("(max-width: 900px)").matches;
+
+//     if (maxWidth900) {
+//         loginBtn.classList.add('nav-menu'); // Add class when viewport is <= 900px
+//          // Add class when viewport is <= 900px
+//     } else {
+//         loginBtn.classList.remove('nav-menu'); // Remove class when viewport is > 900px
+//        // Remove class when viewport is > 900px
+//     }
+
+
+</script>
+
+<script>
+    var a = document.getElementById("loginBtn");
+    var b = document.getElementById("registerBtn");
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+
+    function showlogin() {
+        x.style.left = "4px";
+        y.style.right = "-520px";
+        a.className += " white-btn";
+        b.className = "btn";
+        x.style.opacity = 1;
+        y.style.opacity = 0;
+    }
+
+    function showregister() {
+        x.style.left = "-510px";
+        y.style.right = "5px";
+        a.className = "btn";
+        b.className += " white-btn";
+        x.style.opacity = 0;
+        y.style.opacity = 1;
+    }
+</script>
+<script src="script.js" type="module"></script>
+<script src="user_profile.js"></script>
+<script src="nav.js" type="module"></script>
+
+
+
+
+
+
+</body>
+</html>
